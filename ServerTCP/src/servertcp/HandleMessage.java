@@ -66,7 +66,7 @@ public class HandleMessage implements Runnable {
                     else
                         outToClient.writeBytes("false\n");
                 
-                //Se for 2, o cliente quer receber os clientes ativos no momento
+                //Se for 2, o cliente está enviando uma mensagem
                 else if (message.charAt(0) == '2')
                     saveMessage(message.replaceFirst("2", ""));
                 

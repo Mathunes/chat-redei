@@ -50,8 +50,8 @@ public class ServerTCP extends javax.swing.JFrame implements InterfaceStyle {
                         while (activeServer) {
                             //Esperando contato do cliente
                             Socket connectionSocket = server.accept();
+                            
                             //Imprimindo informações do cliente
-
                             output.setText(output.getText() + getDateTime() + "Cliente conectado: "
                                     + connectionSocket.getInetAddress() + ":" + connectionSocket.getPort() + "\n");
 
