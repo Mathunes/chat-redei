@@ -9,7 +9,7 @@ import java.util.Scanner;
 import javax.swing.JTextPane;
 
 public class HandleMessage implements Runnable {
-    //Socket para receber a conexão criada anteriormente
+    //Socket para receber a conexão criada
     private Socket socketConnection;
     //Lista de clientes recebida como referência para atualizar se o cliente for aceito conforme a validação
     private ArrayList<String> clientList;

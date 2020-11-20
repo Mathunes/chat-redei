@@ -29,6 +29,7 @@ public class ChatGroupWindow extends javax.swing.JFrame implements InterfaceStyl
         this.username = username;
         this.clientSocket = clientSocket;
 
+        //"Username conectado"
         jLabel2.setText(username + jLabel2.getText());
 
         //Chamando método para atualizar o chat
@@ -152,7 +153,6 @@ public class ChatGroupWindow extends javax.swing.JFrame implements InterfaceStyl
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new JPanelGradient(new Color(53, 33, 80), new Color(0, 0, 0));
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -173,7 +173,6 @@ public class ChatGroupWindow extends javax.swing.JFrame implements InterfaceStyl
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(640, 615));
         setMinimumSize(new java.awt.Dimension(640, 615));
         setResizable(false);
 
@@ -256,7 +255,6 @@ public class ChatGroupWindow extends javax.swing.JFrame implements InterfaceStyl
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextPane textPaneMessage;
     // End of variables declaration//GEN-END:variables
 

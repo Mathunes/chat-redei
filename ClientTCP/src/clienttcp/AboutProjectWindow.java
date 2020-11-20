@@ -12,10 +12,6 @@ public class AboutProjectWindow extends javax.swing.JFrame implements InterfaceS
         initComponents();
         setIcon();
         setStyle();
-
-        title.setFont(new Font("Roboto", Font.BOLD, 18));
-        title.setForeground(new Color(255, 255, 255));
-
     }
 
     @Override
@@ -25,6 +21,9 @@ public class AboutProjectWindow extends javax.swing.JFrame implements InterfaceS
 
     @Override
     public void setStyle() {
+        title.setFont(new Font("Roboto", Font.BOLD, 18));
+        title.setForeground(new Color(255, 255, 255));
+        
         body.setFont(new Font("Roboto", 0, 16));
         body.setForeground(new Color(204, 204, 204));
         body.setText("<html>"
