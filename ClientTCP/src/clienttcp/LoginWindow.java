@@ -16,11 +16,16 @@ import javax.swing.border.LineBorder;
 public class LoginWindow extends javax.swing.JFrame implements InterfaceStyle {
 
     private Socket clientSocket;
+    private String host;
+    private int port;
     
-    public LoginWindow() {
+    public LoginWindow(String host, int port) {
         initComponents();
         setIcon();
         setStyle();
+        
+        this.host = host;
+        this.port = port;
     }
     
     @Override
@@ -68,7 +73,7 @@ public class LoginWindow extends javax.swing.JFrame implements InterfaceStyle {
     //Método para conectar cliente ao servidor
     private boolean connectServer(String username) {
         try {
-            clientSocket = new Socket("localhost", 8080);
+            clientSocket = new Socket(host, port);
             
             //Criando cadeia de saída com servidor
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());

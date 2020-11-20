@@ -23,6 +23,8 @@ public class ServerTCP extends javax.swing.JFrame implements InterfaceStyle {
     static ArrayList<String> clientMessages;
 
     private boolean activeServer;
+    
+    static private int port;
 
     public ServerTCP() {
         super("Servidor");
@@ -37,8 +39,8 @@ public class ServerTCP extends javax.swing.JFrame implements InterfaceStyle {
         clientMessages = new ArrayList<String>();
 
         try {
-            //Criando socket de apresentação na porta 8080
-            ServerSocket server = new ServerSocket(8080);
+            //Criando socket de apresentação
+            ServerSocket server = new ServerSocket(port);
             output.setText(getDateTime() + "Servidor iniciado na porta: " + server.getLocalPort() + "\n");
 
             activeServer = true;
@@ -220,9 +222,17 @@ public class ServerTCP extends javax.swing.JFrame implements InterfaceStyle {
         }
     }//GEN-LAST:event_startServerActionPerformed
      
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                if (args.length > 0)
+                    try {
+                        port = Integer.parseInt(args[0]);
+                    } catch (Exception e) {
+                        port = 8080;
+                    }
+                else
+                    port = 8080;
                 new ServerTCP().setVisible(true);
             }
         });
